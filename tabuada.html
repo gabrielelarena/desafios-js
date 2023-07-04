@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style1.css">
+    <title>Tabuada</title>
+    <style>
+        h1 {
+            padding: 20px;
+        }
+
+        #tab {
+            width: 300px;
+            height: 180px;
+            text-indent: 0.2cm;
+        }
+
+        input {
+            width: 200px;
+            font: 18px 'verdana', sans-serif;
+            border-radius: 8px;
+            background-color: #fff;
+            box-shadow: 2px 4px 3px rgba(100, 97, 97, 0.815);
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <button><a href="interacoes.html">Interações</a></button>
+        <button><a href="testevel.html">Velocidade</a></button>
+        <button><a href="horas.html">Hora do dia</a></button>
+        <button><a href="index.html">Início</a></button>
+        <button><a href="veridade.html">Idade</a></button>
+        <button><a href="contador.html">Contador</a></button>
+        <button><a href="analisador.html">Analisador</a></button>
+        <button><a href="somar.html">Somar Valores</a></button>
+    </div>
+    <h1>Tabuada</h1>
+    <section>
+        <div>
+            <p>Número: <input type="number" name="num" id="nu"></p>
+            <input type="button" value="Gerar tabuada" onclick="tabuada()">
+        </div>
+        <div>
+            <select name="tabuada" id="tab" size="10">
+                <option>Digite um número acima</option>
+            </select>
+        </div>
+    </section>
+    <script>
+        function tabuada() {
+            let num = window.document.getElementById('nu')
+            let tab = window.document.getElementById('tab')
+            if (num.value.length == 0) {
+                window.alert('Por favor, digite um número!')
+            } else {
+                let n = Number(num.value)
+                let c = 1
+                tab.innerHTML = ''
+                while (c <= 10) {
+                    let item = document.createElement('option')
+                    item.text = `${n} x ${c} = ${n * c}`
+                    item.value = `tab${c}`
+                    tab.appendChild(item)
+                    c++
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style1.css">
+    <title>Hora do dia</title>
+</head>
+
+<body onload="carregar()">
+    <div>
+        <button><a href="index.html">Início</a></button>
+    </div>
+    <header>
+        <h1>Hora do dia</h1>
+    </header>
+    <section>
+        <div id="msg">
+
+        </div>
+        <div id="foto">
+            <img id="img" src="imagens/Dia.jpg" alt="Foto de dia">
+        </div>
+    </section>
+    <script>
+        function carregar() {
+            var msg = window.document.getElementById('msg')
+            var imagem = window.document.getElementById('img')
+            var data = new Date()
+
+            var hora = data.getHours()
+            msg.innerHTML = `Agora são ${hora} horas.`
+            if (hora >= 0 && hora < 12) {
+                img.src = 'imagens/Dia.jpg'
+                document.body.style.background = '#c0b12e'
+            } else if (hora >= 12 && hora <= 18) {
+                img.src = 'imagens/Tarde.jpg'
+                document.body.style.background = '#c0922e'
+            } else {
+                img.src = 'imagens/Noite.jpg'
+                document.body.style.background = '#130f46'
+            }
+        }
+    </script>
+</body>
+
+</html>

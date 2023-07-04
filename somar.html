@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style1.css">
+    <title>Interações JS</title>
+</head>
+
+<body>
+    <div>
+        <button><a href="interacoes.html">Interações</a></button>
+        <button><a href="testevel.html">Velocidade</a></button>
+        <button><a href="horas.html">Hora do dia</a></button>
+        <button><a href="tabuada.html">Tabuada</a></button>
+        <button><a href="veridade.html">Idade</a></button>
+        <button><a href="contador.html">Contador</a></button>
+        <button><a href="analisador.html">Analisador</a></button>
+        <button><a href="index.html">Início</a></button>
+    </div>
+    <h1>Somando Valores</h1>
+    <div>
+        <input type="number" name="textn1" id="text1">
+        <input type="number" name="textn2" id="text2">
+        <input id="bot" type="button" value="Somar" onclick="somar()">
+        <div id="res">Resultado</div>
+    </div>
+    <script>
+        function somar() {
+            var n01 = window.document.getElementById('text1')
+            var n02 = window.document.getElementById('text2')
+            var res = window.document.getElementById('res')
+            var n1 = Number(n01.value)
+            var n2 = Number(n02.value)
+            var s = n1 + n2
+            res.innerHTML = `A soma entre ${n1} e ${n2} é ${s}`
+        }
+
+    </script>
+    <br>
+</body>
+
+</html>
