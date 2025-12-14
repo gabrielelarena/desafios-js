@@ -12,7 +12,6 @@
   <li>✔️ Exercícios divididos por módulos do curso</li>
   <li>✔️ Desafios feitos em ordem crescente de dificuldade</li>
   <li>✔️ Uso de HTML, CSS e JavaScript</li>
-  <li>✔️ Foco em <strong>DOM</strong>, <strong>funções</strong>, <strong>condições</strong>, <strong>loops</strong> e muito mais</li>
 </ul>
 
 <hr>
@@ -22,7 +21,6 @@
 <pre>
 📦 desafios-js
  ┣ 📁 imagens
- ┣ desafios
  ┣ paginas html
  ┣ styles css
  ┗ README.html
